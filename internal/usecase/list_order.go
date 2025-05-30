@@ -1,6 +1,8 @@
 package usecase
 
-import "github.com/devfullcycle/20-CleanArch/internal/entity"
+import (
+	"github.com/devfullcycle/20-CleanArch/internal/entity"
+)
 
 type OrdersOutputDTO struct {
 	Orders []OrderOutputDTO `json:"orders"`
@@ -33,4 +35,5 @@ func (l *ListOrderUseCase) Execute() (OrdersOutputDTO, error) {
 	}
 
 	return OrdersOutputDTO{Orders: ordersOutput}, nil
+	// return OrdersOutputDTO{}, nil
 }
