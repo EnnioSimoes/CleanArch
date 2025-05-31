@@ -14,6 +14,21 @@ services:
     volumes:
       - .docker/mysql:/var/lib/mysql
 
+  migrations:
+    hostname: migrations
+    container_name: migrations
+    restart: no
+    image: migrate/migrate:v4.18.3
+    environment:
+      MYSQL_DATABASE: orders
+      MYSQL_ROOT_PASSWORD: root
+    volumes:
+      - ./sql/migrations:/migrations
+    command: -path=/migrations -database "mysql://root:root@tcp(mysql:3306)/orders" -verbose up
+    depends_on:
+      mysql:
+        condition: service_healthy
+
   rabbitmq:
     image: rabbitmq:3-management
     container_name: rabbitmq
