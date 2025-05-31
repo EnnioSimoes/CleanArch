@@ -1,3 +1,5 @@
+//go:generate go run github.com/99designs/gqlgen generate
+
 package graph
 
 import "github.com/devfullcycle/20-CleanArch/internal/usecase"
@@ -8,4 +10,5 @@ import "github.com/devfullcycle/20-CleanArch/internal/usecase"
 
 type Resolver struct {
 	CreateOrderUseCase usecase.CreateOrderUseCase
+	ListOrderUseCase   usecase.ListOrderUseCase
 }
