@@ -1,4 +1,4 @@
-module github.com/devfullcycle/20-CleanArch
+module github.com/enniosimoes/CleanArch
 
 go 1.23
 

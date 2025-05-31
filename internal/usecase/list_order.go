@@ -1,7 +1,7 @@
 package usecase
 
 import (
-	"github.com/devfullcycle/20-CleanArch/internal/entity"
+	"github.com/enniosimoes/CleanArch/internal/entity"
 )
 
 type OrdersOutputDTO struct {
