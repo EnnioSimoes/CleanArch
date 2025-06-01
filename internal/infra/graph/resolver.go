@@ -2,7 +2,7 @@
 
 package graph
 
-import "github.com/enniosimoes/CleanArch/internal/usecase"
+import "github.com/EnnioSimoes/CleanArch/internal/usecase"
 
 // This file will not be regenerated automatically.
 //

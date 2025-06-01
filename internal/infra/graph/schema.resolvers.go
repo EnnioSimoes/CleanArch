@@ -7,8 +7,8 @@ package graph
 import (
 	"context"
 
-	"github.com/enniosimoes/CleanArch/internal/infra/graph/model"
-	"github.com/enniosimoes/CleanArch/internal/usecase"
+	"github.com/EnnioSimoes/CleanArch/internal/infra/graph/model"
+	"github.com/EnnioSimoes/CleanArch/internal/usecase"
 )
 
 // CreateOrder is the resolver for the createOrder field.

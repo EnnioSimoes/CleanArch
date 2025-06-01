@@ -3,7 +3,7 @@ package database
 import (
 	"database/sql"
 
-	"github.com/enniosimoes/CleanArch/internal/entity"
+	"github.com/EnnioSimoes/CleanArch/internal/entity"
 )
 
 type OrderRepository struct {

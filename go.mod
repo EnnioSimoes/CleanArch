@@ -1,4 +1,4 @@
-module github.com/enniosimoes/CleanArch
+module github.com/EnnioSimoes/CleanArch
 
 go 1.23
 

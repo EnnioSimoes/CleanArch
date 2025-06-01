@@ -4,9 +4,9 @@ import (
 	"encoding/json"
 	"net/http"
 
-	"github.com/enniosimoes/CleanArch/internal/entity"
-	"github.com/enniosimoes/CleanArch/internal/usecase"
-	"github.com/enniosimoes/CleanArch/pkg/events"
+	"github.com/EnnioSimoes/CleanArch/internal/entity"
+	"github.com/EnnioSimoes/CleanArch/internal/usecase"
+	"github.com/EnnioSimoes/CleanArch/pkg/events"
 )
 
 type WebOrderHandler struct {

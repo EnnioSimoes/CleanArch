@@ -8,12 +8,12 @@ package main
 
 import (
 	"database/sql"
-	"github.com/enniosimoes/CleanArch/internal/entity"
-	"github.com/enniosimoes/CleanArch/internal/event"
-	"github.com/enniosimoes/CleanArch/internal/infra/database"
-	"github.com/enniosimoes/CleanArch/internal/infra/web"
-	"github.com/enniosimoes/CleanArch/internal/usecase"
-	"github.com/enniosimoes/CleanArch/pkg/events"
+	"github.com/EnnioSimoes/CleanArch/internal/entity"
+	"github.com/EnnioSimoes/CleanArch/internal/event"
+	"github.com/EnnioSimoes/CleanArch/internal/infra/database"
+	"github.com/EnnioSimoes/CleanArch/internal/infra/web"
+	"github.com/EnnioSimoes/CleanArch/internal/usecase"
+	"github.com/EnnioSimoes/CleanArch/pkg/events"
 	"github.com/google/wire"
 )
 
