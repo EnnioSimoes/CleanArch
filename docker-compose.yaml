@@ -52,7 +52,7 @@ services:
   migrations:
     hostname: migrations
     container_name: migrations
-    restart: no
+    # restart: never
     image: migrate/migrate:v4.18.3
     environment:
       MYSQL_DATABASE: orders
