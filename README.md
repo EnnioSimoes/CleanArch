@@ -16,11 +16,6 @@ Inclua um README.md com os passos a serem executados no desafio e a porta em que
 docker-composer up -d
 ```
 
-```
-cd cmd/ordersystem/
-go run main.go wire_gen.go
-```
-
 ## Test Rest API
 
 Use the sample requsts in api/ folder.
@@ -59,5 +54,24 @@ call CreateOrder
 call ListOrders
 ```
 
+## Test RabbitMQ
+
+http://localhost:15672/
+
+User: guest
+
+Pass: guest
+
+Create a default queue called ```orders```
+
+After this access the queue ```orders``` and make the bind with the exchange ```amq.direct```
+
+Now you can create a new order throut the GraphQL and check if the message was sent to the queue by clicking the "Get Message(s)" button.
+
+## Run for Development
+```
+cd cmd/ordersystem/
+go run main.go wire_gen.go
+```
 
 
