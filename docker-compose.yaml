@@ -1,6 +1,35 @@
 version: '3'
 
 services:
+  app:
+    image: golang:latest
+    container_name: app
+    restart: always
+    working_dir: /app/cmd/ordersystem
+    ports:
+      - 8080:8080
+    environment:
+      DB_DRIVER: mysql
+      DB_HOST: mysql
+      DB_PORT: 3306
+      DB_USER: root
+      DB_PASSWORD: root
+      DB_NAME: orders
+      WEB_SERVER_PORT: :8000
+      GRPC_SERVER_PORT: 50051
+      GRAPHQL_SERVER_PORT: 8080
+      RABBITMQ_HOST: rabbitmq
+      RABBITMQ_PORT: 5672
+    command: >
+      sh -c "go mod download && go run main.go wire_gen.go"
+    depends_on:
+      mysql:
+        condition: service_healthy
+      rabbitmq:
+        condition: service_healthy
+    volumes:
+      - .:/app
+
   mysql:
     image: mysql:5.7
     container_name: mysql
@@ -45,3 +74,9 @@ services:
     environment:
       RABBITMQ_DEFAULT_USER: guest
       RABBITMQ_DEFAULT_PASS: guest
+    healthcheck:
+      test: ["CMD", "rabbitmqctl", "status"]
+      start_period: 10s
+      interval: 10s
+      timeout: 10s
+      retries: 3
